@@ -1,9 +1,9 @@
 
 // array
 
-const Dias = ["lunes", "martes", "miercoles", "jueves","viernes" ];
+const dias = ["lunes", "martes", "miercoles", "jueves","viernes"];
 
-const Pedidos = [];
+const pedidos = [];
 
 // otras variables
 
@@ -24,23 +24,26 @@ while (pregunta) {
 
     precio = precio + compra;
 
-    if (pregunta == Dias[0]) {
-        Pedidos.push(pregunta)
+    if (pregunta == dias[0]) {
+        pedidos.push(pregunta)
 
-    } else if (pregunta == Dias[1]) {
-        Pedidos.push(pregunta)
+    } else if (pregunta == dias[1]) {
+        pedidos.push(pregunta)
 
-    } else if (pregunta == Dias[2]) {
-        Pedidos.push(pregunta)
-
-    }
-    else if (pregunta == Dias[3]) {
-        Pedidos.push(pregunta)
+    } else if (pregunta == dias[2]) {
+        pedidos.push(pregunta)
 
     }
-    else if (pregunta == Dias[4]) {
-        Pedidos.push(pregunta)
+    else if (pregunta == dias[3]) {
+        pedidos.push(pregunta)
 
+    }
+    else if (pregunta == dias[4]) {
+        pedidos.push(pregunta)
+
+    }
+    else if (pregunta == "F") {
+        pedidos.pop(pregunta);
     }
     else if (pregunta == "ESC") {
         break;
@@ -50,10 +53,14 @@ while (pregunta) {
     }
 
     console.log(nombre + " encargó menú para el día: " + pregunta.toUpperCase() + "\nPrecio total: " + precio);
-    pregunta = prompt("Costo hasta el momento: " + precio + "$" + "\nPor favor vuelva a reservar otro menú o presione ESC");
+    pregunta = prompt("Costo hasta el momento: " + precio + "$" + "\nPor favor vuelva a reservar otro menú o presione ESC.\n Para cancelar el último pedido presione F ");
 
 }
-
+console.log("Lunes: " + pedidos.includes ("lunes"));
+console.log("Martes: " + pedidos.includes ("martes"));
+console.log("Miercoles: " + pedidos.includes ("miercoles",));
+console.log("Jueves: " + pedidos.includes ("jueves"));
+console.log("Viernes: " + pedidos.includes ("viernes"));
 }
 
 // función invocada
