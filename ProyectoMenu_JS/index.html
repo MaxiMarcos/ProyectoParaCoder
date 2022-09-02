@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Universitario</title>
+    <link rel="stylesheet" type="text/css" href="./css/codigo.css">
+</head>
+<body style="background-color: rgb(96, 138, 175)">
+    
+    <h1> RESERVAS MENÚ UNIVERSITARIO </h1>
+    <p> Bienvenidos a la web dedicada para encargar los menues de la semana que deseen. <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, dolorem, dolore vitae dignissimos quia assumenda eaque, corporis voluptas illo iusto tempora? Voluptate at consequatur dolores expedita necessitatibus maiores rerum nostrum?</p>
+
+    <li class="dias">Lunes</li>
+    <li class="dias">Martes</li>
+    <li class="dias">Miercoles</li>
+    <li class="dias">Jueves</li>
+    <li class="dias">Viernes</li>
+    <li class="dias">Lunes V</li>
+    <li class="dias">Martes V</li>
+    <li class="dias">Miercoles V</li>
+    <li class="dias">Jueves V</li>
+    <li class="dias">Viernes V</li> <br>
+
+
+    <div class="DivForm">
+    <form class="DivForm__Formulario" id="formulario">
+        <div>
+            <span>Elige el día que desea encargar menú: </span>
+            <select id="selectMenu">
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="lunes Veg">Lunes Veg</option>
+                <option value="Martes Veg">Martes Veg</option>
+                <option value="Miercoles Veg">Miercoles Veg</option>
+                <option value="Jueves Veg">Jueves Veg</option>
+                <option value="Viernes Veg">Viernes Veg</option>
+            </select>
+            <span id="rta"></span>
+        </div>
+
+
+        <div>
+            <input type="text" placeholder="Nombre" id="nombre">
+        </div>
+        <div>
+            <input type="text" placeholder="Apellido" id="apellido">
+        </div>
+        <div>
+            <input type="number" placeholder="Legajo" id="legajo">
+        </div>
+        <div>
+            <input type="number" placeholder="Telefono" id="tel">
+        </div>
+        <div>
+            <button type="submit" id="submit">Aceptar</button>
+        </div>
+    </form>
+    </div>
+
+    <script src="./js/menu.js"></script>
+</body>
+</html>
