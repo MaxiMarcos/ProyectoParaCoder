@@ -1,3 +1,6 @@
+const alumnos = [];
+
+
 function loguearse() {
 
     let firtname = document.getElementById('nombre').value;
@@ -8,7 +11,8 @@ function loguearse() {
     if (isNaN (firtname && lastname)) {
 
         alert('Bienvenido ' + usuario);
-        console.log("usuario: " + usuario);
+        alumnos.push(usuario);
+        console.log(alumnos);
     } else {
         alert('Por favor vuelva a intentarlo');
     }

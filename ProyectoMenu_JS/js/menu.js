@@ -1,39 +1,41 @@
 let titulo = document.querySelector("h1");
 titulo.style.color = "blue";
 
+let miSelector = document.querySelector("#selectMenu");
+
+
+const pedidos = [];
+let menusReservados = 1;
+
+
+
 
 let boton = document.getElementById("submit2");
 boton.addEventListener("click", entry)
 
-function entry() {
-    console.log("Respuesta");
-}
+function entry(ev) {
 
+    const selector=document.getElementById("selectMenu")
+    const seleccionado= selector.options[selector.selectedIndex].text
 
-function seleccionMenu() {
-    let elegirDia = document.getElementById("selectMenu");
-    let resultado = elegirDia.value;
+    miSelector.style.border = "4px solid green";
 
-    entry();
-    document.getElementById("rta").innerText = `Usted ha elegido la siguiente opción: ${resultado}.`;
-}
-
-function enviar(event) {
-
-    if (resultado(!option[0])) {
-
-        alert("Gracias " + usuario);
-        console.log(usuario + "reservó " + resultado);
-        event.preventDefault();
-
-    } else {
+    if (seleccionado == "seleccionar") {
+        ev.preventDefault() 
+        miSelector.style.border = "3px solid red";
         alert('Por favor vuelva a intentarlo');
-        event.preventDefault();
+    } else {
+        ev.preventDefault() 
+        pedidos.push(seleccionado);
+        console.log(menusReservados++);
+        console.log(pedidos);
     }
+
 }
 
 
-seleccionMenu();
+
+
 
 
 
