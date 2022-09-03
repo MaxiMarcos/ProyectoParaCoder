@@ -1,33 +1,41 @@
 let titulo = document.querySelector("h1");
 titulo.style.color = "blue";
 
-let dias5 = document.getElementById("selectMenu");
-dias5.style.width = "150px";
-dias5.style.border = "2px solid red";
 
+let boton = document.getElementById("submit2");
+boton.addEventListener("click", entry)
+
+function entry() {
+    console.log("Respuesta");
+}
 
 
 function seleccionMenu() {
     let elegirDia = document.getElementById("selectMenu");
     let resultado = elegirDia.value;
 
+    entry();
     document.getElementById("rta").innerText = `Usted ha elegido la siguiente opción: ${resultado}.`;
-    resultado.style = "2px solid green";
+}
+
+function enviar(event) {
+
+    if (resultado(!option[0])) {
+
+        alert("Gracias " + usuario);
+        console.log(usuario + "reservó " + resultado);
+        event.preventDefault();
+
+    } else {
+        alert('Por favor vuelva a intentarlo');
+        event.preventDefault();
+    }
 }
 
 
-
-const formulario = document.getElementById("formulario");
-const boton = document.getElementById("submit");
+seleccionMenu();
 
 
-
-
-
-
-
-
-console.log(seleccionMenu())
 
 
 
