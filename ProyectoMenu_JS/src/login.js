@@ -13,6 +13,10 @@ function loguearse() {
         alert('Bienvenido ' + usuario);
         alumnos.push(usuario);
         console.log(alumnos);
+
+        const elJSON = JSON.stringify(alumnos);
+
+        localStorage.setItem('alumnos', elJSON);
     } else {
         alert('Por favor vuelva a intentarlo');
     }

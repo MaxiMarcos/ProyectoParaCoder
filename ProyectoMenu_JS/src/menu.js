@@ -29,6 +29,10 @@ function entry(ev) {
         pedidos.push(seleccionado);
         console.log(menusReservados++);
         console.log(pedidos);
+
+        const elJSON = JSON.stringify(pedidos);
+
+        localStorage.setItem('listadoMenus', elJSON);
     }
 
 }
